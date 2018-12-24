@@ -1,9 +1,50 @@
 <ion-view view-title="Account">
   <ion-content>
-    <ion-list>
+  	  <div  >
+          <div class="row" style="text-align: center;" ng-repeat="item in range(items.length,2)">
+            <div class="col col-50" ng-show="item <=2">
+              <div>
+              <img src="{{items[item].imgurl}}" width="80%" height="80%" style=""/>
+            </div>
+</div>
+
+            <div class="col col-50" ng-show="(item+1!==items.length) && item <=2 ">
+ <div ng-show="item+1 !=3">
+                <img src="{{items[item+1].imgurl}}" width="80%" height="80%" style=""/>
+</div>
+              <div  ng-show="item+1 ==3" style="background-image: url({{items[item+1].imgurl}});
+    background-size: cover;
+    width: 80%;
+    height: 80%;
+   /* border-radius: 50%;*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #000;opacity: 0.5;    font-size: xx-large;
+    font-weight: bold;">
+  +{{items.length-3}}
+</div>
+            
+            </div>
+          </div>
+
+
+        </div>
+  <!--   <ion-list>
     <ion-toggle  ng-model="settings.enableFriends">
         Enable Friends
     </ion-toggle>
-    </ion-list>
+
+    <button class="datepicker" >
+bero
+</button>
+    <button ng-click="testimg()"> Abeer</button>
+    </ion-list> -->
   </ion-content>
 </ion-view>
